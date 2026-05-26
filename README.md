@@ -11,6 +11,10 @@ The files in this directory may provide filetype detection, syntax highlighting,
 and editor setup metadata. They must not implement parser, type-checker,
 diagnostic, formatting, lint, codegen, rename, reference, or ownership logic.
 
+Document formatting and range formatting are provided by the same LSP server.
+Editors should call their standard LSP format command, with format-on-save wired
+to the LSP client when enabled.
+
 ## Targets
 
 - Neovim: `neovim/ftdetect/sifr.lua` and `neovim/lsp/sifr.lua`

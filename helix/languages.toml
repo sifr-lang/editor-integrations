@@ -5,6 +5,7 @@ file-types = ["sifr"]
 comment-token = "#"
 indent = { tab-width = 4, unit = "    " }
 language-servers = ["sifr-lsp"]
+auto-format = true
 
 [language-server.sifr-lsp]
 command = "sifr"
