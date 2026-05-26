@@ -15,6 +15,10 @@ Document formatting and range formatting are provided by the same LSP server.
 Editors should call their standard LSP format command, with format-on-save wired
 to the LSP client when enabled.
 
+`sifr fmt` remains the CLI, CI, hook, and manual-file formatter. It is not the
+editor document-formatting provider. Formatter command and config behavior is
+documented in the main Sifr repository's `docs/formatter.md`.
+
 ## Targets
 
 - Neovim: `neovim/ftdetect/sifr.lua` and `neovim/lsp/sifr.lua`
