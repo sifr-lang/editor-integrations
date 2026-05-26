@@ -10,6 +10,15 @@
 (add-to-list 'auto-mode-alist '("\\.sifr\\'" . sifr-mode))
 (add-to-list 'eglot-server-programs '(sifr-mode . ("sifr" "lsp" "--stdio")))
 
+(defun sifr-format-buffer-on-save ()
+  "Format Sifr buffers through the active LSP server before saving."
+  (when (and (derived-mode-p 'sifr-mode) (eglot-managed-p))
+    (eglot-format-buffer)))
+
+(add-hook 'sifr-mode-hook
+          (lambda ()
+            (add-hook 'before-save-hook #'sifr-format-buffer-on-save nil t)))
+
 (provide 'sifr-mode)
 
 ;;; sifr-mode.el ends here
