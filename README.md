@@ -1,7 +1,7 @@
 # Sifr Editor Integration Assets
 
 These assets are contribution-ready editor integrations for the current Sifr
-tooling contract. Every target delegates semantic behavior to:
+tooling rules. Every target delegates semantic behavior to:
 
 ```bash
 sifr lsp --stdio
